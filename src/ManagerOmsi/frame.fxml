@@ -2,8 +2,11 @@
 
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -15,14 +18,48 @@
                <content>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #97A3A6;">
                      <children>
-                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="56.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;">
+                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="99.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;">
                            <children>
-                              <ComboBox id="cbMap" fx:id="cbMap" layoutX="36.0" layoutY="16.0" prefWidth="150.0" promptText="map" />
-                              <ComboBox id="cbLine" fx:id="cbLine" layoutX="257.0" layoutY="16.0" prefWidth="150.0" promptText="bus line" />
+                              <ComboBox id="cbMap" fx:id="cbMap" layoutX="25.0" layoutY="60.0" prefWidth="150.0" promptText="map" />
+                              <ComboBox id="cbLine" fx:id="cbLine" layoutX="255.0" layoutY="60.0" prefWidth="150.0" promptText="bus line" />
+                              <Label layoutX="25.0" text="Information">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="31.0" prefHeight="0.0" prefWidth="451.0" />
                            </children>
                         </Pane>
-                        <Pane layoutX="14.0" layoutY="84.0" prefHeight="200.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;" />
-                        <Pane layoutX="14.0" layoutY="297.0" prefHeight="200.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;" />
+                        <Pane layoutX="14.0" layoutY="130.0" prefHeight="200.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;">
+                           <children>
+                              <Label layoutX="24.0" layoutY="-2.0" text="IBIS Codes">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="29.0" prefHeight="0.0" prefWidth="451.0" />
+                              <TableView layoutY="29.0" prefHeight="171.0" prefWidth="452.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Route" />
+                                  <TableColumn prefWidth="75.0" text="Direction" />
+                                </columns>
+                              </TableView>
+                           </children></Pane>
+                        <Pane layoutX="14.0" layoutY="348.0" prefHeight="200.0" prefWidth="451.0" style="-fx-background-color: #F2F2F2;">
+                           <children>
+                              <Label layoutX="32.0" layoutY="-2.0" text="Special">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="30.0" prefHeight="0.0" prefWidth="451.0" />
+                              <TableView layoutY="30.0" prefHeight="170.0" prefWidth="451.0">
+                                <columns>
+                                  <TableColumn prefWidth="147.0" text="Bus Type" />
+                                  <TableColumn minWidth="0.0" prefWidth="303.0" text="Description" />
+                                </columns>
+                              </TableView>
+                           </children></Pane>
                      </children>
                   </Pane>
                </content></Tab>
