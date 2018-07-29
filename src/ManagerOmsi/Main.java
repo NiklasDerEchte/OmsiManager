@@ -14,7 +14,10 @@ public class Main extends Application {
         primaryStage.setTitle("Omsi Manager");
         primaryStage.setScene(new Scene(root, 1000, 750));
         primaryStage.show();
-        Verbindung.getConnection();
+        Connection conn = Verbindung.getConnection();
+        if(conn == null) {
+            throw new NullPointerException();
+        }
 
     }
 
