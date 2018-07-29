@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class Verbindung {
 
 
-    public static Connection getConnection() throws Exception {
+    public static Connection getConnection() {
         try {
             String driver = "com.mysql.jdbc.Driver";
             String url = "jdbc:mysql://localhost:3306/omsimanager?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
